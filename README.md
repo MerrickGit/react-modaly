@@ -5,6 +5,7 @@
 [![NPM](https://img.shields.io/npm/v/react-modaly.svg)](https://www.npmjs.com/package/react-modaly)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 ![Licence](https://img.shields.io/npm/l/react-modaly)
+[![Build Status](https://travis-ci.org/MerrickGit/react-modaly.svg?branch=master)](https://travis-ci.org/MerrickGit/react-modaly)
 ## Install
 
 ```bash

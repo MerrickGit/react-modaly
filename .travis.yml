@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "12"
+before_deploy:
+  - npm run build
+  - npm run prepare
+  - npm run predeploy
+  - npm version patch
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_AUTH_TOKEN"
+  skip_cleanup: true
+  on:
+    branch: master

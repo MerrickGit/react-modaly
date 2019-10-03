@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider as ModalProvider } from 'react-modaly';
 import Form from './Form';
 import modalConfig from './modals/config';

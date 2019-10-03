@@ -4,7 +4,6 @@ node_js:
 before_deploy:
   - npm run build
   - npm run prepare
-  - npm run predeploy
   - npm run deploy
   - npm version patch
 deploy:

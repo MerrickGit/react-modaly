@@ -23,7 +23,7 @@
     "build": "rollup -c",
     "start": "rollup -c -w",
     "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build cd ..",
+    "predeploy": "cd example && npm install && npm run build &&  cd ..",
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {},

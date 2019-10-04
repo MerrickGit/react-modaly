@@ -24,7 +24,7 @@
     "start": "rollup -c -w",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build &&  cd ..",
-    "commit": "sgc",
+    "cmt": "git-cz",
     "semantic-release": "semantic-release"
   },
   "dependencies": {},
@@ -43,6 +43,7 @@
     "babel-runtime": "^6.26.0",
     "commitizen": "^4.0.3",
     "cross-env": "^5.1.4",
+    "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
@@ -61,10 +62,15 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "typescript": "^2.8.3",
-    "semantic-release": "^15.13.24"
+    "semantic-release": "^15.13.24",
+    "typescript": "^2.8.3"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }

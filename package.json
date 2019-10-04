@@ -1,6 +1,6 @@
 {
   "name": "react-modaly",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Easy to use modal window for React application",
   "author": "MerrickGit",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "start": "rollup -c -w",
     "prepare": "npm run build",
     "predeploy": "cd example && npm install && npm run build &&  cd ..",
-    "deploy": "gh-pages -d example/build"
+    "commit": "sgc",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -40,12 +41,12 @@
     "@typescript-eslint/parser": "^2.3.2",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "commitizen": "^4.0.3",
     "cross-env": "^5.1.4",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.15.1",
-    "gh-pages": "^1.2.0",
     "husky": "^3.0.8",
     "lint-staged": "^9.4.1",
     "prettier": "^1.18.2",
@@ -60,7 +61,8 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "typescript": "^2.8.3"
+    "typescript": "^2.8.3",
+    "semantic-release": "^15.13.24"
   },
   "files": [
     "dist"

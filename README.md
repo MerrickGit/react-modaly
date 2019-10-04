@@ -28,6 +28,8 @@ class Example extends React.Component {
 }
 ```
 
+[Example app](https://merrickgit.github.io/react-modaly/) and [code of example app](https://github.com/MerrickGit/react-modaly/tree/master/example)
+
 ## License
 
 MIT © [MerrickGit](https://github.com/MerrickGit)

@@ -1,4 +1,3 @@
 module.exports = {
-  branch: 'master',
-  ci: false
+  branch: 'master'
 };

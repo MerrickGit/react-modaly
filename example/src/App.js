@@ -5,7 +5,8 @@ import modalConfig from './modals/config';
 import Layout from './modals/Layout';
 
 const MODAL_NODE = document.getElementById('modal');
-export default () => (
+
+const App = () => (
   <ModalProvider config={modalConfig} Layout={Layout} node={MODAL_NODE}>
     <div>
       <h1>Example app</h1>
@@ -13,3 +14,5 @@ export default () => (
     </div>
   </ModalProvider>
 );
+
+export default App;

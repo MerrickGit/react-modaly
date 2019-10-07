@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDialog, statuses } from 'react-modaly';
-import { Button, InputGroup } from "@blueprintjs/core";
+import { Button, InputGroup } from '@blueprintjs/core';
 import { exampleInstanceName } from './modals/config';
 
-export default () => {
+const Form = () => {
   const [framework, setFramework] = useState('');
   const [library, setLibrary] = useState('');
   const [isSad, setSad] = useState(false);
@@ -12,7 +12,7 @@ export default () => {
   const onClick = () => {
     open({
       instanceName: exampleInstanceName,
-      params: { buttonText: 'button_text' }
+      params: { buttonText: 'button_text' },
     }).then(({ action, values: { framework, modalLibrary } = {} }) => {
       if (action === statuses.success) {
         setFramework(framework);
@@ -25,6 +25,8 @@ export default () => {
         setSad(true);
       }
     });
+
+    return null;
   };
 
   return (
@@ -44,3 +46,5 @@ export default () => {
     </div>
   );
 };
+
+export default Form;

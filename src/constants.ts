@@ -1,13 +1,13 @@
 import { TAction } from './types';
 
-type TStatuses = {
-  close: TAction,
-  success: TAction,
-  cancel: TAction
+type TActions = {
+  close: TAction;
+  success: TAction;
+  cancel: TAction;
 };
 
-export const statuses: TStatuses = {
+export const actions: TActions = {
   close: 'close',
   success: 'success',
-  cancel: 'cancel'
+  cancel: 'cancel',
 };

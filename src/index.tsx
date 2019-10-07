@@ -1,5 +1,5 @@
 import { Provider } from './Provider';
-import { useDialog } from "./useDialog";
-import { statuses } from "./constants";
+import { useDialog } from './useDialog';
+import { actions } from './constants';
 
-export { Provider, useDialog, statuses };
+export { Provider, useDialog, actions };

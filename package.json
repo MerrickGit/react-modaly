@@ -8,6 +8,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
   "keywords": [
     "react",
     "modal",
@@ -63,7 +64,7 @@
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
     "semantic-release": "^15.13.24",
-    "typescript": "^2.8.3"
+    "typescript": "^3.6.3"
   },
   "files": [
     "dist"

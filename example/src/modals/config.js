@@ -1,7 +1,7 @@
-import Example from './Example';
+import React from 'react';
 
 export const exampleInstanceName = 'modal/example';
 
 export default {
-  [exampleInstanceName]: Example
+  [exampleInstanceName]: React.lazy(() => import('./Example'))
 };

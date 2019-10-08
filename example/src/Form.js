@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDialog, statuses } from 'react-modaly';
+import { useDialog, actions } from 'react-modaly';
 import { Button, InputGroup } from '@blueprintjs/core';
 import { exampleInstanceName } from './modals/config';
 
@@ -14,14 +14,14 @@ const Form = () => {
       instanceName: exampleInstanceName,
       params: { buttonText: 'button_text' },
     }).then(({ action, values: { framework, modalLibrary } = {} }) => {
-      if (action === statuses.success) {
+      if (action === actions.success) {
         setFramework(framework);
         setLibrary(modalLibrary);
-      } else if (action === statuses.cancel) {
+      } else if (action === actions.cancel) {
         setSad(true);
         setFramework('');
         setLibrary('');
-      } else if (action === statuses.close) {
+      } else if (action === actions.close) {
         setSad(true);
       }
     });

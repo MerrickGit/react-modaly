@@ -11,7 +11,9 @@ export default ({ close, component: Component, success, cancel, instanceName }) 
       className={instanceName}
       isOpen
     >
-      <Component success={success} cancel={cancel} />
+      <React.Suspense fallback={'loading'}>
+        <Component success={success} cancel={cancel} />
+      </React.Suspense>
     </Dialog>
   )
 };

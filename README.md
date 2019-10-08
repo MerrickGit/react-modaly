@@ -1,6 +1,6 @@
 # react-modaly
 
-> Promise based controller for modal window.5
+> Promise based controller for modal window.
 
 [![NPM](https://img.shields.io/npm/v/react-modaly.svg)](https://www.npmjs.com/package/react-modaly)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)

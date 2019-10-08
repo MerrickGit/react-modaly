@@ -81,7 +81,7 @@ export const config = {
 };
 ```
 
-##### Step 3 - add modal Provider in project
+##### Step 4 - add modal Provider in project
 
 Provider create modal context for `useDialog`.
 
@@ -103,7 +103,7 @@ const App = () => (
 
 ```
 
-##### Step 4 - now you can open modal
+##### Step 5 - now you can open modal
 
 ```js
 import React, { useState } from 'react';

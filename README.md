@@ -1,6 +1,6 @@
 # react-modaly
 
-> Promise based controller for modal window.5
+> Promise based controller for modal window.
 
 [![NPM](https://img.shields.io/npm/v/react-modaly.svg)](https://www.npmjs.com/package/react-modaly)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -81,7 +81,7 @@ export const config = {
 };
 ```
 
-##### Step 3 - add modal Provider in project
+##### Step 4 - add modal Provider in project
 
 Provider create modal context for `useDialog`.
 
@@ -103,7 +103,7 @@ const App = () => (
 
 ```
 
-##### Step 4 - now you can open modal
+##### Step 5 - now you can open modal
 
 ```js
 import React, { useState } from 'react';

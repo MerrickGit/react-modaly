@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^3.18.1",
+    "body-scroll-lock": "^2.6.4",
     "prop-types": "^15.6.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",

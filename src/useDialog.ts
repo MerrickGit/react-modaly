@@ -1,42 +1,31 @@
-import { TContext, TOpenCallback, TUseDialog } from './types';
-import { useContext } from 'react';
-import { DialogContext } from './context';
+import React, { useMemo } from 'react';
 
 /**
- * useDialog is hook which can be used to open modal window.
- * useDialog return `open` function which is Promise.
- * This promise will resolved/rejected when modal window will closed.
+ * useDialog is hook which can be used to open/close modal window.
  *
  * @example
  * import { useState } from 'react';
- * import { actions } from 'react-modaly';
+ * import { useDialog, Modal } from 'react-modaly';
  * const Button = () => {
  *  const [disabled, setDisabled] = useState(false);
- *
- *  const { open } = useDialog();
- *  const onClick = () => {
- *    open('account/information', { isShowIcon: true })
- *      .then(({ values }) => setDisabled(values.rightAccess));
- *  };
- *
+ *  const { isOpen, open, close } = useDialog();
  *
  *  return (
- *    <button onClick={onClick} disabled={disabled}>Choose something into modal</button>
+ *    <React.Fragment>
+ *      <button onClick={open} disabled={disabled}>Choose something into modal</button>
+ *      <Modal isOpen={isOpen}>Modal window</Modal>
+ *    </React.Fragment>
  *  );
  * };
  */
-export const useDialog = (): TUseDialog => {
-  const { setEvents, setInstances, config } = useContext<TContext>(DialogContext);
 
-  const open: TOpenCallback = instance =>
-    new Promise((resolve, reject): void => {
-      if (instance.instanceName in config) {
-        setInstances(prevInstances => [...prevInstances, instance]);
-        setEvents(prevEvents => [...prevEvents, { resolve, reject }]);
-      } else {
-        throw new Error(`${instance['instanceName']} don't exist in modal config`);
-      }
-    });
+type TDialog = (defaultState?: boolean) => { isOpened: boolean; open: () => void; close: () => void };
 
-  return { open };
+export const useDialog: TDialog = defaultState => {
+  const [isOpened, setOpen] = React.useState<boolean>(defaultState || false);
+
+  const open = React.useCallback(() => setOpen(true), []);
+  const close = React.useCallback(() => setOpen(false), []);
+
+  return useMemo(() => ({ isOpened, open, close }), [isOpened]);
 };

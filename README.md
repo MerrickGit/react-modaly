@@ -98,7 +98,7 @@ const Form = () => {
         value={framework}
         onChange={e => setFramework(e.target.value)}
       />
-      <Button text="Open example modal" onClick={onClick} />
+      <Button text="Open example modal" onClick={open} />
       <Modal isOpen={isOpened}>
         <ExampleModal close={close} cancel={handleClose} succes={handleSuccess} />
       </Modal>

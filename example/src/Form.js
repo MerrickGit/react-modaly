@@ -43,7 +43,7 @@ const Form = () => {
         <Button text="Open example modal" onClick={open} />
         {isSad ? <p>Creator is so sad</p> : null}
       </div>
-      <Modal isOpen={isOpen}>
+      <Modal isOpen={isOpen} as="section">
         <Example close={handleClose} success={handleSuccess} cancel={handleCancel} />
       </Modal>
     </React.Fragment>

@@ -1,28 +1,23 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import scrollLocker from 'body-scroll-lock';
 
 import { DialogContext } from './context';
 import { TContext } from './types';
 
 type TProps = {
   isOpen: boolean;
-  targetScrollSelector: string;
+  as?: string;
 };
 
-const Modal: React.FC<TProps> = ({ targetScrollSelector, isOpen, children }) => {
+const Modal: React.FC<TProps> = ({ isOpen, children, as = 'div' }) => {
   const { node } = React.useContext<TContext>(DialogContext);
-  const { current: modalWrapper } = React.useRef(document.createElement('div'));
+  const { current: modalWrapper } = React.useRef(document.createElement(as));
 
   React.useEffect(() => {
     if (typeof node !== 'string') node.appendChild(modalWrapper);
 
-    const target = modalWrapper.querySelector(targetScrollSelector) as Element;
-    scrollLocker.disableBodyScroll(target);
-
     return (): void => {
       if (typeof node !== 'string') node.removeChild(modalWrapper);
-      scrollLocker.enableBodyScroll(target);
     };
   }, []);
 

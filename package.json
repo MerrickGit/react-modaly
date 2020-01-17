@@ -5,10 +5,10 @@
   "author": "MerrickGit",
   "license": "MIT",
   "repository": "https://github.com/MerrickGit/react-modaly",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
-  "typings": "dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "keywords": [
     "react",
     "modal",
@@ -29,17 +29,20 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@types/body-scroll-lock": "^2.6.1"
-  },
-  "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
-  },
-  "devDependencies": {
-    "@svgr/rollup": "^2.4.1",
+    "@types/body-scroll-lock": "^2.6.1",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.6.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@svgr/rollup": "^2.4.1",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
     "@typescript-eslint/parser": "^2.3.2",
     "babel-core": "^6.26.3",
@@ -54,8 +57,6 @@
     "husky": "^3.0.8",
     "lint-staged": "^9.4.1",
     "prettier": "^1.18.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
     "react-scripts-ts": "^2.16.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
@@ -65,8 +66,7 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "semantic-release": "^15.13.24",
-    "typescript": "^3.6.3"
+    "semantic-release": "^15.13.24"
   },
   "files": [
     "dist",

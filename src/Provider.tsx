@@ -4,7 +4,7 @@ import { TContext } from './types';
 
 type TProps = {
   /**
-   * HTML node element which use to render modal in React Portal
+   * HTML element which use to render modal in React Portal
    */
   node: Element;
 };

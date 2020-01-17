@@ -5,7 +5,9 @@ import { DialogContext } from './context';
 import { TContext } from './types';
 
 type TProps = {
+  /** Flag for displaying a modal window  */
   isOpen: boolean;
+  /** If you need to change 'div' modal wrapper to another  */
   as?: string;
 };
 

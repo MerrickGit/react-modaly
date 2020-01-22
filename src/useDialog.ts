@@ -1,6 +1,12 @@
-import React, { useMemo } from 'react';
+import * as React from 'react';
 
-type TDialog = (defaultState?: boolean) => { isOpen: boolean; open: () => void; close: () => void };
+type TDialog = (
+  defaultState?: boolean,
+) => {
+  isOpen: boolean;
+  open: () => void;
+  close: () => void;
+};
 
 export const useDialog: TDialog = defaultState => {
   const [isOpen, setOpen] = React.useState<boolean>(defaultState || false);
@@ -8,5 +14,5 @@ export const useDialog: TDialog = defaultState => {
   const open = React.useCallback(() => setOpen(true), []);
   const close = React.useCallback(() => setOpen(false), []);
 
-  return useMemo(() => ({ isOpen, open, close }), [isOpen]);
+  return React.useMemo(() => ({ isOpen, open, close }), [isOpen]);
 };

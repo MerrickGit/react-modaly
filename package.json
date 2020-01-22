@@ -1,14 +1,11 @@
 {
-  "name": "react-modaly",
   "version": "0.0.0-development",
-  "description": "Easy to use modal window for React application",
-  "author": "MerrickGit",
   "license": "MIT",
-  "repository": "https://github.com/MerrickGit/react-modaly",
-  "main": "./dist/index.js",
-  "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react",
     "modal",
@@ -16,62 +13,37 @@
     "typescript",
     "javascript"
   ],
-  "engines": {
-    "node": ">=8",
-    "npm": ">=5"
-  },
   "scripts": {
-    "build": "rollup -c",
-    "start": "rollup -c -w",
-    "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build &&  cd ..",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "predeploy": "cd example && npm install && npm run build && cd ..",
     "cmt": "git-cz",
     "semantic-release": "semantic-release"
   },
-  "dependencies": {
-    "@types/body-scroll-lock": "^2.6.1",
-    "@types/jest": "^23.1.5",
-    "@types/react": "^16.3.13",
-    "@types/react-dom": "^16.0.5",
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "name": "react-modaly",
+  "description": "Easy to use modal window for React application",
+  "author": "MerrickGit",
+  "repository": "https://github.com/MerrickGit/react-modaly",
+  "module": "dist/react-modaly.esm.js",
+  "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "@types/react": "^16.9.18",
+    "@types/react-dom": "^16.9.5",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^4.2.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "typescript": "^3.6.3"
-  },
-  "peerDependencies": {
-    "react": ">=16.0.0",
-    "react-dom": ">=16.0.0"
-  },
-  "devDependencies": {
-    "@svgr/rollup": "^2.4.1",
-    "@typescript-eslint/eslint-plugin": "^2.3.2",
-    "@typescript-eslint/parser": "^2.3.2",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
-    "commitizen": "^4.0.3",
-    "cross-env": "^5.1.4",
-    "cz-conventional-changelog": "^3.0.2",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.15.1",
-    "husky": "^3.0.8",
-    "lint-staged": "^9.4.1",
-    "prettier": "^1.18.2",
-    "react-scripts-ts": "^2.16.0",
-    "rollup": "^0.62.0",
-    "rollup-plugin-babel": "^3.0.7",
-    "rollup-plugin-commonjs": "^9.1.3",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-typescript2": "^0.17.0",
-    "rollup-plugin-url": "^1.4.0",
+    "tsdx": "^0.12.3",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.5",
     "semantic-release": "^15.13.24"
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
